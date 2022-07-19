@@ -1,4 +1,5 @@
 # Luigid on Docker
+[![Publish Docker image](https://github.com/vliz-be-opsci/docker-luigid/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/vliz-be-opsci/docker-luigid/actions/workflows/docker-publish.yml)  [![Docker Image CI](https://github.com/vliz-be-opsci/docker-luigid/actions/workflows/docker-image.yml/badge.svg)](https://github.com/vliz-be-opsci/docker-luigid/actions/workflows/docker-image.yml)
 
 Run the Luigi Central Scheduler / Web UI in a lightweight long-running container.
 
