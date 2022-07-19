@@ -1,0 +1,29 @@
+version: '3.7'
+ 
+volumes:
+  luigi-files:
+  sqlite-db:
+
+services:
+  luigid:
+    build:
+      context: .
+    container_name: luigid
+    volumes:
+      - ./volumes/luigi-files:/etc/luigi/
+    ports:
+      - "8082:8082"
+    # env_file:
+    #   - .env
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m 
+    labels:
+      be.vliz.container.description: "Luigi Scheduler + workers"
+      be.vliz.container.owner: "rory.meyer@vliz.be"
+      be.vliz.container.project: "EMODNET-Bio"
+      be.vliz.container.group: "bio-pipes"
+      be.vliz.container.vcs-url: "https://github.com/vliz-be-opsci/bio-pipes"
+      be.vliz.container.docs-url: "https://github.com/vliz-be-opsci/bio-pipes"
